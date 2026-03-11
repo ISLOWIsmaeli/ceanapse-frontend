@@ -1,0 +1,308 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Donate to Ceanapse - Support regenerative blue economy and coastal community transformation.">
+    <title>Donate - Ceanapse</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-brand">
+                <a href="index.html" class="logo">CEANAPSE</a>
+                <p class="tagline">Regenerative Blue Economy</p>
+            </div>
+            <button class="hamburger" id="hamburgerBtn">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="impact.html">Impact</a></li>
+                <li><a href="team.html">Team</a></li>
+                <li><a href="donate.html" class="active btn-donate">Donate</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="page-hero">
+        <div class="page-hero-background">
+            <img src="assets/images/donate-hero.jpg" alt="Community coming together to restore coastal areas" class="hero-img">
+        </div>
+        <div class="hero-overlay"></div>
+        <div class="page-hero-content">
+            <h1>Make a Difference</h1>
+            <p>Your support empowers coastal communities to build a regenerative and resilient future</p>
+        </div>
+    </section>
+
+    <!-- Donation Intro -->
+    <section class="donation-intro">
+        <div class="container">
+            <h2>Why Your Support Matters</h2>
+            <p>Every contribution directly funds programs that create lasting, transformative change in coastal and lacustrine communities. Your generosity helps us:</p>
+            <div class="impact-highlights">
+                <div class="highlight-item">
+                    <span class="highlight-icon">🌊</span>
+                    <h4>Restore Ecosystems</h4>
+                    <p>Fund mangrove restoration and coral reef protection projects that strengthen biodiversity and coastal resilience.</p>
+                </div>
+                <div class="highlight-item">
+                    <span class="highlight-icon">👥</span>
+                    <h4>Empower Communities</h4>
+                    <p>Support sustainable livelihood training, entrepreneurship programs, and access to markets for women and youth.</p>
+                </div>
+                <div class="highlight-item">
+                    <span class="highlight-icon">🔬</span>
+                    <h4>Enable Innovation</h4>
+                    <p>Deploy AI-powered early warning systems and digital tools that put knowledge directly in the hands of communities.</p>
+                </div>
+                <div class="highlight-item">
+                    <span class="highlight-icon">🎓</span>
+                    <h4>Inspire Youth</h4>
+                    <p>Fund education programs, blue art initiatives, and technology bootcamps that empower the next generation.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Projects -->
+    <section class="donation-projects">
+        <div class="container">
+            <h2>Donation Projects</h2>
+            <p class="section-subtitle">Support specific initiatives that create measurable impact</p>
+
+            <!-- Project 1: Blue Art -->
+            <div class="project-card featured">
+                <div class="project-image">
+                    <img src="assets/images/project-blue-art.jpg" alt="Children creating art for ocean conservation awareness" class="img-responsive">
+                </div>
+                <div class="project-content">
+                    <h3>Blue Art: Creative Climate Action</h3>
+                    <p class="project-highlight">Engage children and youth through art to create awareness and inspire climate ethics</p>
+                    <p>We engage children and youth through artwork to create awareness on the importance and value of our oceans and lacustrine environments. This helps them develop rigorous climate ethics, fearless advocacy, and generous mentorship to the community.</p>
+                    <p><strong>Activities include:</strong> Music performances, spoken word art, poetry, paintings, drawings, artifacts, and handmade crafts to make a lasting impression on conservation.</p>
+                    <div class="project-stats">
+                        <div class="stat">
+                            <strong>Reach:</strong> 500+ youth annually
+                        </div>
+                        <div class="stat">
+                            <strong>Impact:</strong> Climate resilience & advocacy
+                        </div>
+                    </div>
+                    <a href="#donate-form" class="btn btn-primary">Support Blue Art</a>
+                </div>
+            </div>
+
+            <!-- Project 2: Community Empowerment -->
+            <div class="project-card featured">
+                <div class="project-image">
+                    <img src="assets/images/project-community.jpg" alt="Fishermen and community members in training workshop" class="img-responsive">
+                </div>
+                <div class="project-content">
+                    <h3>Community Empowerment & Sustainable Livelihood</h3>
+                    <p class="project-highlight">Strengthen community capacity for inclusive participation in regenerative blue economy</p>
+                    <div class="project-details">
+                        <h4>Strategic Objectives:</h4>
+                        <p>Build community capacity and stewardship to drive inclusive participation in regenerative blue economy initiatives.</p>
+                        <h4>Key Activities:</h4>
+                        <ul style="margin: 1rem 0;">
+                            <li>Training programs on sustainable fishing, aquaculture, eco-tourism, and marine-based micro-enterprises</li>
+                            <li>Blue Economy Resource Hub for market access, toolkits, and mentorship</li>
+                            <li>Community savings and credit groups linked to livelihood projects for women and youth</li>
+                        </ul>
+                    </div>
+                    <div class="project-stats">
+                        <div class="stat">
+                            <strong>Beneficiaries:</strong> 2000+ annually
+                        </div>
+                        <div class="stat">
+                            <strong>Focus:</strong> Women & Youth
+                        </div>
+                    </div>
+                    <a href="#donate-form" class="btn btn-primary">Support Livelihoods</a>
+                </div>
+            </div>
+
+            <!-- Project 3: Lacustrine Community Park -->
+            <div class="project-card featured">
+                <div class="project-image">
+                    <img src="assets/images/project-park.jpg" alt="Youth led shoreline restoration and community park development" class="img-responsive">
+                </div>
+                <div class="project-content">
+                    <h3>Lacustrine Community Park</h3>
+                    <p class="project-highlight">Restoring Lake Victoria's shoreline through youth-led action</p>
+                    <p>Shauri Yako, an informal settlement on the edge of Lake Victoria, has been plagued by pollution, waste dumping, and shoreline degradation. Ceanapse is bringing together young people to reclaim this neglected lakeside and transform it into the first-ever Lacustrine Community Park in Homabay — a clean, green, community-owned space that protects the lake and restores dignity.</p>
+                    <p><strong>What Your Support Builds:</strong></p>
+                    <ul style="margin: 1rem 0;">
+                        <li><strong>Shoreline Restoration Zone:</strong> Bamboo, vetiver grass, and native trees to stop erosion and revive biodiversity</li>
+                        <li><strong>Community Green Park:</strong> Safe, accessible park with seating, shade, and child-friendly spaces from recycled materials</li>
+                        <li><strong>Waste Management Hub:</strong> Youth-managed sorting points and community sensitization</li>
+                        <li><strong>Micro Urban Farming:</strong> Aquaponics units for food security and income generation</li>
+                        <li><strong>Environmental Education Space:</strong> Open-air learning area for conservation and climate workshops</li>
+                    </ul>
+                    <div class="project-stats">
+                        <div class="stat">
+                            <strong>Status:</strong> Fully Youth-Led
+                        </div>
+                        <div class="stat">
+                            <strong>Community:</strong> Shauri Yako, Homabay
+                        </div>
+                    </div>
+                    <a href="#donate-form" class="btn btn-primary">Support the Park</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- General Donation Section -->
+    <section class="donation-section" id="donate-form">
+        <div class="container">
+            <h2>Make Your Donation</h2>
+            <p class="section-subtitle">Every amount makes a difference. Choose how you want to support our mission.</p>
+
+            <div class="donation-options">
+                <div class="donation-type">
+                    <h3>One-Time Donation</h3>
+                    <p>Make a single contribution to support our ongoing work in coastal communities.</p>
+                    <div class="amount-buttons">
+                        <button class="amount-btn" data-amount="50">$50</button>
+                        <button class="amount-btn" data-amount="100">$100</button>
+                        <button class="amount-btn" data-amount="250">$250</button>
+                        <button class="amount-btn" data-amount="500">$500</button>
+                        <button class="amount-btn" data-amount="custom">Custom</button>
+                    </div>
+                    <button class="btn btn-primary" style="width: 100%; margin-top: 1rem;">Donate Now</button>
+                </div>
+
+                <div class="donation-type">
+                    <h3>Monthly Giving</h3>
+                    <p>Become a sustaining partner with a monthly donation. Your recurring gift ensures continuity of impact.</p>
+                    <div class="amount-buttons">
+                        <button class="amount-btn" data-amount="10">$10/mo</button>
+                        <button class="amount-btn" data-amount="25">$25/mo</button>
+                        <button class="amount-btn" data-amount="50">$50/mo</button>
+                        <button class="amount-btn" data-amount="100">$100/mo</button>
+                        <button class="amount-btn" data-amount="custom">Custom</button>
+                    </div>
+                    <button class="btn btn-primary" style="width: 100%; margin-top: 1rem;">Give Monthly</button>
+                </div>
+            </div>
+
+            <div class="payment-info">
+                <p style="text-align: center; margin-top: 2rem; font-size: 0.95rem; color: #666;">
+                    <strong>Note:</strong> This is a frontend template. To process donations, you will need to integrate with a payment gateway such as Stripe, PayPal, or another payment processor. Update the donation buttons to redirect to your payment processor's checkout page.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Impact per Dollar -->
+    <section class="impact-section">
+        <div class="container">
+            <h2>Your Impact</h2>
+            <p class="section-subtitle">Here's how your donation creates change</p>
+            <div class="impact-grid">
+                <div class="impact-item">
+                    <span class="impact-amount">$25</span>
+                    <p>Provides climate education materials for 10 students</p>
+                </div>
+                <div class="impact-item">
+                    <span class="impact-amount">$50</span>
+                    <p>Trains one community member in sustainable fishing practices</p>
+                </div>
+                <div class="impact-item">
+                    <span class="impact-amount">$100</span>
+                    <p>Funds equipment for youth environmental club for a month</p>
+                </div>
+                <div class="impact-item">
+                    <span class="impact-amount">$250</span>
+                    <p>Supports one woman entrepreneur through livelihood training</p>
+                </div>
+                <div class="impact-item">
+                    <span class="impact-amount">$500</span>
+                    <p>Plants and maintains 100 mangrove trees for ecosystem restoration</p>
+                </div>
+                <div class="impact-item">
+                    <span class="impact-amount">$1000+</span>
+                    <p>Deploy IoT sensor for early warning system in a community</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Transparency Section -->
+    <section class="transparency-section">
+        <div class="container">
+            <h2>Accountability & Transparency</h2>
+            <p>We are committed to using every donation responsibly and maintaining the highest standards of accountability.</p>
+            <div class="transparency-grid">
+                <div class="transparency-item">
+                    <h4>Financial Stewardship</h4>
+                    <p>We maintain detailed records of all donations and ensure funds are allocated according to donor intent and organizational priorities.</p>
+                </div>
+                <div class="transparency-item">
+                    <h4>Impact Reporting</h4>
+                    <p>Annual impact reports detail our activities, outcomes, and learning from programs across all our strategic focus areas.</p>
+                </div>
+                <div class="transparency-item">
+                    <h4>Community Accountability</h4>
+                    <p>Our programs are designed with and for communities, ensuring their voices guide our priorities and implementation.</p>
+                </div>
+                <div class="transparency-item">
+                    <h4>Tax Status</h4>
+                    <p>Ceanapse is a registered international NGO. [Include registration/tax details and documentation links as applicable]</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>CEANAPSE</h4>
+                    <p>Regenerative Blue Economy</p>
+                    <p class="footer-tagline">Empowering coastal communities for a sustainable future.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="impact.html">Our Impact</a></li>
+                        <li><a href="team.html">Team</a></li>
+                        <li><a href="donate.html">Donate</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact Us</h4>
+                    <p>Nairobi, Kenya</p>
+                    <p>Email: info@ceanapse.org</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Follow Us</h4>
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook">f</a>
+                        <a href="#" aria-label="Twitter">𝕏</a>
+                        <a href="#" aria-label="Instagram">📷</a>
+                        <a href="#" aria-label="LinkedIn">in</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 CEANAPSE. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="{% static 'js/main.js' %}"></script>
+</body>
+</html>

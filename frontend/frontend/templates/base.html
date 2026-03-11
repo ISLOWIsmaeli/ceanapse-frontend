@@ -1,0 +1,173 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Ceanapse - Regenerative Blue Economy. Empowering coastal communities through sustainable solutions and environmental stewardship.">
+    <title>Ceanapse - Regenerative Blue Economy</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-brand">
+                <a href="index.html" class="logo">CEANAPSE</a>
+                <p class="tagline">Regenerative Blue Economy</p>
+            </div>
+            
+            <ul class="nav-menu" id="navMenu">
+                <li><a href={% url 'frontend-home' %} class="active">Home</a></li>
+                <li><a href={% url 'about-page' %}>About</a></li>
+                <li><a href={% url 'impacts-page' %}>Impact</a></li>
+                <li><a href={% url 'team-page' %}>Team</a></li>
+                <li><a href={% url 'donate-page' %} class="btn-donate">Donate</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-background">
+            <img src="{% static 'images/hero-image.jpg' %}" alt="Ocean waves and coastal landscape" class="hero-img">
+        </div>
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h1>Regenerative Blue Economy</h1>
+            <p class="hero-subtitle">From the Nile's source to the ocean's depth, we are shaping a sustainable, regenerative, and resilient future.</p>
+            <div class="hero-buttons">
+                <a href="about.html" class="btn btn-primary">Learn More</a>
+                <a href="donate.html" class="btn btn-secondary">Support Us</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mission Section -->
+    <section class="mission-section">
+        <div class="container">
+            <div class="mission-content">
+                <div class="mission-text">
+                    <h2>Our Mission</h2>
+                    <p>To empower coastal communities through sustainable blue economy solutions, faith-based environmental stewardship, and inclusive leadership, building resilience, dignity, and opportunity in the face of climate change.</p>
+                    <a href="about.html" class="link-arrow">Explore Our Vision →</a>
+                </div>
+                <div class="mission-image">
+                    <img src="assets/images/mission-image.jpg" alt="Community working together on coastal restoration" class="img-responsive">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- KRA Highlights Section -->
+    <section class="kra-section">
+        <div class="container">
+            <h2>What We Do</h2>
+            <p class="section-subtitle">Our strategic focus areas for regenerative blue economy impact</p>
+            <div class="kra-grid">
+                <div class="kra-card">
+                    <div class="kra-icon">🌊</div>
+                    <h3>Sustainable Marine Livelihoods</h3>
+                    <p>Empower coastal communities through eco-friendly fishing, aquaculture, and marine tourism opportunities.</p>
+                </div>
+                <div class="kra-card">
+                    <div class="kra-icon">🌱</div>
+                    <h3>Climate Resilience</h3>
+                    <p>Foster environmental stewardship through mangrove restoration, coral reef protection, and community education.</p>
+                </div>
+                <div class="kra-card">
+                    <div class="kra-icon">🤝</div>
+                    <h3>Community Governance</h3>
+                    <p>Strengthen local leadership and inclusive decision-making for blue economy initiatives.</p>
+                </div>
+                <div class="kra-card">
+                    <div class="kra-icon">📊</div>
+                    <h3>Innovation & Data</h3>
+                    <p>Leverage technology, monitoring systems, and data-driven solutions for effective interventions.</p>
+                </div>
+                <div class="kra-card">
+                    <div class="kra-icon">⚡</div>
+                    <h3>AI for Environmental Action</h3>
+                    <p>Deploy AI and early-warning systems that empower coastal communities with real-time information.</p>
+                </div>
+                <div class="kra-card">
+                    <div class="kra-icon">🎨</div>
+                    <h3>Youth & Children</h3>
+                    <p>Engage young people through art, technology bootcamps, and climate action initiatives.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Impact Story Section -->
+    <section class="story-section">
+        <div class="container">
+            <h2>Featured Project: Lacustrine Community Park</h2>
+            <div class="story-content">
+                <div class="story-image">
+                    <img src="assets/images/project-image.jpg" alt="Lacustrine Community Park - youth restoring Lake Victoria shoreline" class="img-responsive">
+                </div>
+                <div class="story-text">
+                    <p class="story-highlight">Restoring Lake Victoria's shoreline through youth-led action</p>
+                    <p>Shauri Yako, an informal settlement on Lake Victoria's edge, has been plagued by pollution and degradation. Ceanapse is bringing together young people to reclaim this neglected lakeside and transform it into the first-ever Lacustrine Community Park in Homabay — a clean, green, community-owned space that protects the lake and restores dignity.</p>
+                    <p>This fully youth-led project involves local households, women's groups, and environmental clubs in clean-ups, tree planting, and lake protection activities. Every contribution helps build a sustainable model of grassroots blue-economy restoration.</p>
+                    <a href="donate.html" class="btn btn-primary">Support This Project</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action Section -->
+    <section class="cta-section">
+        <div class="container">
+            <h2>Join the Movement for Regenerative Blue Economy</h2>
+            <p>We bridge the gap between local coastal realities and shaping global policy through research, technology, and climate justice.</p>
+            <div class="cta-buttons">
+                <a href="about.html" class="btn btn-primary-light">Learn Our Story</a>
+                <a href="donate.html" class="btn btn-primary-light">Make a Difference</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>CEANAPSE</h4>
+                    <p>Regenerative Blue Economy</p>
+                    <p class="footer-tagline">Empowering coastal communities for a sustainable future.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="impact.html">Our Impact</a></li>
+                        <li><a href="team.html">Team</a></li>
+                        <li><a href="donate.html">Donate</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact Us</h4>
+                    <p>Nairobi, Kenya</p>
+                    <p>Email: info@ceanapse.org</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Follow Us</h4>
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook">f</a>
+                        <a href="#" aria-label="Twitter">𝕏</a>
+                        <a href="#" aria-label="Instagram">📷</a>
+                        <a href="#" aria-label="LinkedIn">in</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 CEANAPSE. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="{% static 'js/main.js' %}"></script>
+</body>
+</html>
