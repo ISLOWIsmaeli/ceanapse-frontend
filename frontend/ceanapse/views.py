@@ -11,3 +11,5 @@ def team_page(request):
     return render(request, "ceanapse/team.html")
 def donate_page(request):
     return render(request, "ceanapse/donate.html")
+def checkout_page(request):
+    return render(request, "ceanapse/donation_checkout.html")

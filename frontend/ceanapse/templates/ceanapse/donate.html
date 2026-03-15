@@ -1,5 +1,5 @@
 {% extends "base.html" %}
-{% block title %}Ceanapse{% endblock title %}
+{% block title %}Donate{% endblock title %}
 {% block content %}
     <!-- Hero Section -->
     <section class="page-hero">
@@ -67,7 +67,7 @@
                             <strong>Impact:</strong> Climate resilience & advocacy
                         </div>
                     </div>
-                    <a href="#donate-form" class="btn btn-primary">Support Blue Art</a>
+                    <a href="{% url 'checkout-page' %}" class="btn btn-primary">Support Blue Art</a>
                 </div>
             </div>
 
@@ -97,7 +97,7 @@
                             <strong>Focus:</strong> Women & Youth
                         </div>
                     </div>
-                    <a href="#donate-form" class="btn btn-primary">Support Livelihoods</a>
+                    <a href="{% url 'checkout-page' %}" class="btn btn-primary">Support Livelihoods</a>
                 </div>
             </div>
 
@@ -126,13 +126,13 @@
                             <strong>Community:</strong> Shauri Yako, Homabay
                         </div>
                     </div>
-                    <a href="#donate-form" class="btn btn-primary">Support the Park</a>
+                    <a href="{% url 'checkout-page' %}" class="btn btn-primary">Support the Park</a>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- General Donation Section -->
+    {% comment %} <!-- General Donation Section -->
     <section class="donation-section" id="donate-form">
         <div class="container">
             <h2>Make Your Donation</h2>
@@ -172,7 +172,7 @@
                 </p>
             </div>
         </div>
-    </section>
+    </section> {% endcomment %}
 
     <!-- Impact per Dollar -->
     <section class="impact-section">
@@ -181,27 +181,27 @@
             <p class="section-subtitle">Here's how your donation creates change</p>
             <div class="impact-grid">
                 <div class="impact-item">
-                    <span class="impact-amount">$25</span>
+                    <span class="impact-amount">KES25</span>
                     <p>Provides climate education materials for 10 students</p>
                 </div>
                 <div class="impact-item">
-                    <span class="impact-amount">$50</span>
+                    <span class="impact-amount">KES50</span>
                     <p>Trains one community member in sustainable fishing practices</p>
                 </div>
                 <div class="impact-item">
-                    <span class="impact-amount">$100</span>
+                    <span class="impact-amount">KES100</span>
                     <p>Funds equipment for youth environmental club for a month</p>
                 </div>
                 <div class="impact-item">
-                    <span class="impact-amount">$250</span>
+                    <span class="impact-amount">KES250</span>
                     <p>Supports one woman entrepreneur through livelihood training</p>
                 </div>
                 <div class="impact-item">
-                    <span class="impact-amount">$500</span>
+                    <span class="impact-amount">KES500</span>
                     <p>Plants and maintains 100 mangrove trees for ecosystem restoration</p>
                 </div>
                 <div class="impact-item">
-                    <span class="impact-amount">$1000+</span>
+                    <span class="impact-amount">KES1000+</span>
                     <p>Deploy IoT sensor for early warning system in a community</p>
                 </div>
             </div>

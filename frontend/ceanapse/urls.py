@@ -7,4 +7,5 @@ urlpatterns = [
     path("about", views.about_page,name="about-page"),
     path("team", views.team_page,name="team-page"),
     path("donate",views.donate_page,name="donate-page"),
+    path("checkout",views.checkout_page,name="checkout-page"),
 ]

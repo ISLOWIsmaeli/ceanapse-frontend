@@ -1,5 +1,5 @@
 {% extends "base.html" %}
-{% block title %}Ceanapse{% endblock title %}
+{% block title %}About{% endblock title %}
 {% block content %}
     <!-- Hero Section -->
     <section class="page-hero">
@@ -99,7 +99,7 @@
         <div class="container">
             <h2>Guided by Visionary Leaders</h2>
             <p class="section-subtitle">Our organization is led by dedicated professionals committed to regenerative blue economy</p>
-            <p style="text-align: center; margin: 2rem 0;">Our leadership team brings expertise in physical oceanography, marine science, geosciences, monitoring and evaluation, and community engagement. <a href="team.html" class="link-arrow">Meet the full team →</a></p>
+            <p style="text-align: center; margin: 2rem 0;">Our leadership team brings expertise in physical oceanography, marine science, geosciences, monitoring and evaluation, and community engagement. <a href="{% url 'team-page' %}" class="link-arrow">Meet the full team →</a></p>
         </div>
     </section>
 
@@ -109,8 +109,8 @@
             <h2>Be Part of the Blue Revolution</h2>
             <p>Join us in empowering coastal communities and building a sustainable future for our oceans.</p>
             <div class="cta-buttons">
-                <a href="impact.html" class="btn btn-primary-light">See Our Impact</a>
-                <a href="donate.html" class="btn btn-primary-light">Support Our Mission</a>
+                <a href="{% url 'impacts-page' %}" class="btn btn-primary-light">See Our Impact</a>
+                <a href="{% url 'donate-page' %}" class="btn btn-primary-light">Support Our Mission</a>
             </div>
         </div>
     </section>
