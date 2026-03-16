@@ -1,6 +1,20 @@
 // ===============================
 // CEANAPSE WEBSITE - MAIN JAVASCRIPT
 // ===============================
+// Team Member Bio Dropdown
+window.toggleBio = function(link) {
+    const shortBio = link.previousElementSibling;
+    const longBio = link.nextElementSibling;
+    if (longBio.style.display === 'none') {
+        longBio.style.display = 'block';
+        link.textContent = 'Show less';
+        if (shortBio) shortBio.style.display = 'none';
+    } else {
+        longBio.style.display = 'none';
+        link.textContent = 'Learn more';
+        if (shortBio) shortBio.style.display = 'block';
+    }
+};
 
 // Mobile Menu Toggle
 document.addEventListener('DOMContentLoaded', function() {

@@ -688,16 +688,19 @@ ul li, ol li {
 }
 
 .team-image {
-    width: 100%;
-    height: 280px;
+    width: 220px;
+    height: 220px;
     overflow: hidden;
     background-color: #e0e0e0;
+    margin: 0 auto;
+    border-radius: 50%;
 }
 
 .team-image img {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    border-radius: 50%;
 }
 
 .team-info {
@@ -726,6 +729,24 @@ ul li, ol li {
     font-size: 0.95rem;
     color: var(--text-light);
 }
+
+.team-bio-short {
+    display: block;
+    max-height: 3.2em;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: normal;
+    line-clamp: 2;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    display: -webkit-box;
+    transition: max-height 0.3s ease;
+}
+
+.team-bio-long {
+    transition: max-height 0.3s ease;
+}
+
 
 .value-highlight {
     background-color: var(--light-color);
