@@ -1,10 +1,15 @@
+
 {% extends "base.html" %}
+{% load static %}
 {% block title %}Ceanapse{% endblock title %}
 {% block content %}
 <!-- Hero Section -->
     <section class="hero">
         <div class="hero-background">
-            <img src="#" alt="Ocean waves and coastal landscape" class="hero-img">
+            <video class="hero-img" autoplay loop muted playsinline>
+                <source src="{% static 'videos/ocean-waves.mp4' %}" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
         </div>
         <div class="hero-overlay"></div>
         <div class="hero-content">
@@ -24,10 +29,10 @@
                 <div class="mission-text">
                     <h2>Our Mission</h2>
                     <p>To empower coastal communities through sustainable blue economy solutions, faith-based environmental stewardship, and inclusive leadership, building resilience, dignity, and opportunity in the face of climate change.</p>
-                    <a href="{% url 'about-page' %}" class="link-arrow">Explore Our Vision →</a>
+                    <a href="#" class="link-arrow">Explore Our Vision →</a>
                 </div>
                 <div class="mission-image">
-                    <img src="#" alt="Community working together on coastal restoration" class="img-responsive">
+                    <img src="{% static 'images/community_restoration.jpg' %}" alt="Community working together on coastal restoration" class="img-responsive">
                 </div>
             </div>
         </div>

@@ -1,3 +1,22 @@
+/* Mission image sizing fix */
+.mission-image {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.mission-image img {
+    max-width: 400px;
+    width: 100%;
+    height: auto;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+}
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: var(--text-dark);
+    background-color: var(--white);
+}
 /* Remove underline from all links by default */
 a, a:visited, a:hover, a.active {
     text-decoration: none;
@@ -557,6 +576,7 @@ ul li, ol li {
 .values-section {
     margin-top: 3rem;
     padding-top: 3rem;
+    text-align: center;
     border-top: 2px solid var(--border-color);
 }
 
