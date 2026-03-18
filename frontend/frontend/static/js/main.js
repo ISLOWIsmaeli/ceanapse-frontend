@@ -1,6 +1,20 @@
 // ===============================
 // CEANAPSE WEBSITE - MAIN JAVASCRIPT
 // ===============================
+// Team Member Bio Dropdown
+window.toggleBio = function(link) {
+    const shortBio = link.previousElementSibling;
+    const longBio = link.nextElementSibling;
+    if (longBio.style.display === 'none') {
+        longBio.style.display = 'block';
+        link.textContent = 'Show less';
+        if (shortBio) shortBio.style.display = 'none';
+    } else {
+        longBio.style.display = 'none';
+        link.textContent = 'Learn more';
+        if (shortBio) shortBio.style.display = 'block';
+    }
+};
 
 // Mobile Menu Toggle
 document.addEventListener('DOMContentLoaded', function() {
@@ -34,29 +48,122 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
-// Amount Button Selection (Donation Page)
+
+// Donation Checkout Form Logic (only on donation page)
 document.addEventListener('DOMContentLoaded', function() {
-    const amountBtns = document.querySelectorAll('.amount-btn');
+    const form = document.getElementById('donation-form');
+    const amountInput = document.getElementById('donation-amount');
+    const summaryAmount = document.getElementById('summary-amount');
+    const summaryTotal = document.getElementById('summary-total');
+    const recurringCheckbox = document.getElementById('recurring-donation');
+    const recurringSection = document.getElementById('recurring-summary');
+    const amountButtons = document.querySelectorAll('.amount-btn');
+    const submitBtn = document.getElementById('submit-btn');
+    const btnLoader = document.getElementById('btn-loader');
 
-    amountBtns.forEach(btn => {
-        btn.addEventListener('click', function() {
-            // Remove active class from all buttons
-            amountBtns.forEach(b => b.style.backgroundColor = '');
-            amountBtns.forEach(b => b.style.color = '');
-            amountBtns.forEach(b => b.style.borderColor = '');
+    if (form && amountInput && summaryAmount && summaryTotal) {
+        // Update summary when amount changes
+        function updateSummary() {
+            const amount = parseInt(amountInput.value) || 0;
+            const formattedAmount = amount.toLocaleString('en-US');
+            summaryAmount.textContent = `KES ${formattedAmount}`;
+            summaryTotal.textContent = `KES ${formattedAmount}`;
+        }
 
-            // Add active styles to clicked button
-            this.style.backgroundColor = '#0066cc';
-            this.style.color = 'white';
-            this.style.borderColor = '#0066cc';
-
-            const amount = this.getAttribute('data-amount');
-            console.log('Selected amount: ' + amount);
-
-            // Here you would typically pass this to your payment processor
-            // For now, we just log it for demonstration
+        // Quick amount buttons
+        amountButtons.forEach(btn => {
+            btn.addEventListener('click', (e) => {
+                e.preventDefault();
+                const amount = parseInt(btn.dataset.amount);
+                amountInput.value = amount;
+                amountButtons.forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+                updateSummary();
+                amountInput.focus();
+            });
         });
-    });
+
+        // Amount input change
+        amountInput.addEventListener('input', () => {
+            amountButtons.forEach(b => b.classList.remove('active'));
+            updateSummary();
+        });
+
+        // Toggle recurring summary
+        if (recurringCheckbox && recurringSection) {
+            recurringCheckbox.addEventListener('change', () => {
+                if (recurringCheckbox.checked) {
+                    recurringSection.style.display = 'flex';
+                } else {
+                    recurringSection.style.display = 'none';
+                }
+            });
+        }
+
+        // Form submission
+        form.addEventListener('submit', (e) => {
+            e.preventDefault();
+
+            // Reset error messages
+            const emailError = document.getElementById('email-error');
+            const amountError = document.getElementById('amount-error');
+            const formErrors = document.getElementById('form-errors');
+            if (emailError) emailError.textContent = '';
+            if (amountError) amountError.textContent = '';
+            if (formErrors) formErrors.style.display = 'none';
+
+            // Validate form
+            const email = document.getElementById('donor-email').value;
+            const amount = parseInt(amountInput.value);
+
+            let hasError = false;
+
+            if (!email || !email.includes('@')) {
+                if (emailError) emailError.textContent = 'Please enter a valid email address';
+                hasError = true;
+            }
+
+            if (!amount || amount < 100) {
+                if (amountError) amountError.textContent = 'Please enter a donation amount of at least KES 100';
+                hasError = true;
+            }
+
+            if (amount > 1000000) {
+                if (amountError) amountError.textContent = 'Maximum donation amount is KES 1,000,000';
+                hasError = true;
+            }
+
+            if (hasError) {
+                return;
+            }
+
+            // Show loading state
+            if (submitBtn) submitBtn.disabled = true;
+            if (btnLoader) btnLoader.style.display = 'inline-block';
+
+            // Collect form data
+            const formData = {
+                donor_email: email,
+                amount: amount,
+                recurring: recurringCheckbox ? recurringCheckbox.checked : false,
+                anonymous: document.getElementById('anonymous-donation') ? document.getElementById('anonymous-donation').checked : false
+            };
+
+            console.log('[v0] Form submission - Payment data:', formData);
+
+            // Simulate successful submission (remove in production)
+            setTimeout(() => {
+                alert('Thank you for your donation!\n\nAmount: KES ' + amount.toLocaleString() + 
+                      '\nRecurring: ' + (formData.recurring ? 'Yes (Monthly)' : 'No') +
+                      '\n\nThis is a demo. In production, you would be redirected to a payment gateway.');
+                if (submitBtn) submitBtn.disabled = false;
+                if (btnLoader) btnLoader.style.display = 'none';
+            }, 1500);
+        });
+
+        // Initialize summary
+        updateSummary();
+    }
 });
 
 // Smooth Scroll for Internal Links

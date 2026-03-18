@@ -18,16 +18,22 @@
     <nav class="navbar">
         <div class="container">
             <div class="nav-brand">
-                <a href="index.html" class="logo">CEANAPSE</a>
-                <p class="tagline">Regenerative Blue Economy</p>
+                <a href="{% url 'frontend-home' %}" class="logo" style="display: flex; align-items: center; gap: 0.4rem;">
+                    <img src="{% static 'images/Regenerative Blue Economy BG.svg' %}" alt="Ceanapse Logo" style="height: 1.7rem; width: auto; vertical-align: middle; display: inline-block;" />
+                    <span style="font-size: 1.25rem;">CEANAPSE</span>
+                </a>
             </div>
-            
+            <button class="hamburger" id="hamburgerBtn">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
             <ul class="nav-menu" id="navMenu">
                 <li><a href="{% url 'frontend-home' %}" class="active">Home</a></li>
                 <li><a href="{% url 'about-page' %}">About</a></li>
                 <li><a href="{% url 'impacts-page' %}">Impact</a></li>
                 <li><a href="{% url 'team-page' %}">Team</a></li>
-                <li><a href="{% url 'donate-page' %}" class="btn-donate">Donate</a></li>
+                <li><a href="{% url 'donate-page' %}" class="active btn-donate">Donate</a></li>
             </ul>
         </div>
     </nav>
