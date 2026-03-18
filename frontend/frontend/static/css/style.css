@@ -2,70 +2,72 @@
    CEANAPSE WEBSITE - MAIN STYLESHEET
    =============================== */
 
-/* Root Variables */
-:root {
-    --primary-color: #0066cc;
-    --secondary-color: #00a86b;
-    --accent-color: #ff6b35;
-    --dark-color: #1a1a1a;
+
+.nav-brand {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.2rem;
+}
     --light-color: #f8f9fa;
-    --gray-color: #6c757d;
-    --white: #ffffff;
-    --text-dark: #333333;
-    --text-light: #666666;
-    --border-color: #e0e0e0;
-    
-    --spacing-xs: 0.5rem;
-    --spacing-sm: 1rem;
-    --spacing-md: 1.5rem;
-    --spacing-lg: 2rem;
-    --spacing-xl: 3rem;
-    
-    --radius: 8px;
-    --shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-    --shadow-lg: 0 4px 16px rgba(0, 0, 0, 0.15);
-}
 
-/* ===============================
-   RESET & BASE STYLES
-   =============================== */
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-html {
-    scroll-behavior: smooth;
-}
-
-body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    line-height: 1.6;
-    color: var(--text-dark);
-    background-color: var(--white);
-}
-
-a {
+.logo {
+    font-size: 1.5rem;
+    font-weight: 900;
     color: var(--primary-color);
-    text-decoration: none;
-    transition: color 0.3s ease;
+    letter-spacing: 1px;
 }
+   RESET & BASE STYLES
 
+.tagline {
+    font-size: 0.75rem;
+    color: var(--secondary-color);
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    margin: 0;
+}
+    }
+}
+    .nav-brand {
+        gap: 0.1rem;
+    }
+    .logo {
+        font-size: 1.1rem;
+    }
+    .tagline {
+        font-size: 0.65rem;
+    }
+        width: auto;
+        display: inline-block;
+        vertical-align: middle;
+        margin-bottom: 0.1rem;
+    }
+}
+    .tagline {
+        font-size: 0.85rem;
+        color: var(--secondary-color);
+        font-weight: 600;
+        letter-spacing: 0.5px;
+        margin-left: 0.5rem;
+        margin-bottom: 0;
+        align-self: flex-end;
+        white-space: nowrap;
+    }
 a:hover {
     color: var(--secondary-color);
-}
-
-img {
-    max-width: 100%;
-    height: auto;
-    display: block;
-}
-
-.img-responsive {
-    width: 100%;
-    height: auto;
+        .nav-brand {
+            gap: 0.3rem;
+        }
+        .logo {
+            font-size: 1.1rem;
+        }
+        .logo img {
+            height: 1.3rem;
+        }
+        .tagline {
+            font-size: 0.65rem;
+            margin-left: 0.3rem;
+        }
 }
 
 h1, h2, h3, h4, h5, h6 {

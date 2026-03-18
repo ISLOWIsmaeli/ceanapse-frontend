@@ -1,0 +1,3 @@
+<!-- SVG Logo for Ceanapse Regenerative Blue Economy -->
+{% comment %} This file is used as the logo icon in the navigation bar {% endcomment %}
+{% include 'images/Regenerative Blue Economy BG.svg' %}
