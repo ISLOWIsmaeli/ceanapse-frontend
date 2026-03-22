@@ -1,10 +1,11 @@
 {% extends "base.html" %}
+{% load static %}
 {% block title %}Impact{% endblock title %}
 {% block content %}
     <!-- Hero Section -->
     <section class="page-hero">
         <div class="page-hero-background">
-            <img src="assets/images/impact-hero.jpg" alt="Coastal communities working together on environmental projects" class="hero-img">
+            <img src="{% static 'images/optional-kra.jpeg' %}" alt="Coastal communities working together on environmental projects" class="hero-img">
         </div>
         <div class="hero-overlay"></div>
         <div class="page-hero-content">
@@ -40,7 +41,7 @@
                     </div>
                 </div>
                 <div class="kra-detail-image">
-                    <img src="assets/images/kra1-image.jpg" alt="Fishermen using sustainable fishing practices" class="img-responsive">
+                    <img src="{% static 'images/kra1.jpeg' %}" alt="Fishermen using sustainable fishing practices" class="img-responsive">
                 </div>
             </div>
         </div>
@@ -51,7 +52,7 @@
         <div class="container">
             <div class="kra-detail">
                 <div class="kra-detail-image">
-                    <img src="assets/images/kra2-image.jpg" alt="Mangrove restoration and coral reef protection" class="img-responsive">
+                    <img src="{% static 'images/kra2.jpeg' %}" alt="Mangrove restoration and coral reef protection" class="img-responsive">
                 </div>
                 <div class="kra-detail-text">
                     <span class="kra-number">KRA 2</span>
@@ -89,7 +90,7 @@
                     </div>
                 </div>
                 <div class="kra-detail-image">
-                    <img src="assets/images/kra3-image.jpg" alt="Community governance meetings and participatory planning" class="img-responsive">
+                    <img src="{% static 'images/kra3.jpeg' %}" alt="Community governance meetings and participatory planning" class="img-responsive">
                 </div>
             </div>
         </div>
@@ -100,7 +101,7 @@
         <div class="container">
             <div class="kra-detail">
                 <div class="kra-detail-image">
-                    <img src="assets/images/kra4-image.jpg" alt="Technology and data-driven monitoring systems" class="img-responsive">
+                    <img src="{% static 'images/kra4.jpeg' %}" alt="Technology and data-driven monitoring systems" class="img-responsive">
                 </div>
                 <div class="kra-detail-text">
                     <span class="kra-number">KRA 4</span>
@@ -139,7 +140,7 @@
                     </div>
                 </div>
                 <div class="kra-detail-image">
-                    <img src="assets/images/kra5-image.jpg" alt="AI technology and early warning systems for fishermen" class="img-responsive">
+                    <img src="{% static 'images/kra5.jpeg' %}" alt="AI technology and early warning systems for fishermen" class="img-responsive">
                 </div>
             </div>
         </div>
@@ -150,7 +151,7 @@
         <div class="container">
             <div class="kra-detail">
                 <div class="kra-detail-image">
-                    <img src="assets/images/kra6-image.jpg" alt="Children and youth engaged in blue art and climate education" class="img-responsive">
+                    <img src="{% static 'images/kra6.jpg' %}" alt="Children and youth engaged in blue art and climate education" class="img-responsive">
                 </div>
                 <div class="kra-detail-text">
                     <span class="kra-number">KRA 6</span>
@@ -185,7 +186,7 @@
                     </div>
                 </div>
                 <div class="kra-detail-image">
-                    <img src="assets/images/kra7-image.jpg" alt="Community healing circles and climate resilience workshops" class="img-responsive">
+                    <img src="{% static 'images/kra7.jpeg' %}" alt="Community healing circles and climate resilience workshops" class="img-responsive">
                 </div>
             </div>
         </div>

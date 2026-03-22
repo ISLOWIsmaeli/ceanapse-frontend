@@ -1,11 +1,12 @@
 {% extends "base.html" %}
+{% load static %}
 {% block title %}Checkout{% endblock title %}
 {% block content %}
 
     <!-- Hero Section -->
     <section class="page-hero">
         <div class="page-hero-background">
-            <img src="assets/images/donate-hero.jpg" alt="Support ocean conservation and coastal communities" class="hero-img">
+            <img src="{% static 'images/donation-background.jpg' %}" alt="Support ocean conservation and coastal communities" class="hero-img">
         </div>
         <div class="hero-overlay"></div>
         <div class="page-hero-content">
@@ -34,7 +35,7 @@
                             <h3 id="project-name">Blue Art: Creative Climate Action</h3>
                             <p id="project-description">Engage children and youth through art to create awareness and inspire climate ethics for ocean conservation.</p>
                         </div>
-                        <img src="assets/images/project-blue-art.jpg" alt="Project image" class="summary-image">
+                        <img src="{% static 'images/blue-art.jpg' %}" alt="Project image" class="summary-image">
                     </div>
 
                     <!-- Donation Form -->

@@ -5,7 +5,21 @@
     justify-content: center;
 }
 .mission-image img {
-    max-width: 400px;
+    max-width: 800px;
+    width: 100%;
+    height: auto;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+}
+.story-image img {
+    max-width: 800px;
+    width: 100%;
+    height: auto;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+}
+.kra-detail-image img {
+    max-width: 800px;
     width: 100%;
     height: auto;
     border-radius: var(--radius);
@@ -1159,7 +1173,9 @@ ul li, ol li {
 
     .kra-detail-image {
         order: 1;
+        
     }
+
 
     .kra-detail-text {
         order: 2;

@@ -1,10 +1,14 @@
 {% extends "base.html" %}
+{% load static %}
 {% block title %}Donate{% endblock title %}
 {% block content %}
     <!-- Hero Section -->
     <section class="page-hero">
         <div class="page-hero-background">
-            <img src="assets/images/donate-hero.jpg" alt="Community coming together to restore coastal areas" class="hero-img">
+            <video class="hero-img" autoplay loop muted playsinline>
+                <source src="{% static 'videos/projects-background.mp4' %}" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
         </div>
         <div class="hero-overlay"></div>
         <div class="page-hero-content">
@@ -52,7 +56,7 @@
             <!-- Project 1: Blue Art -->
             <div class="project-card featured">
                 <div class="project-image">
-                    <img src="assets/images/project-blue-art.jpg" alt="Children creating art for ocean conservation awareness" class="img-responsive">
+                    <img src="{% static 'images/blue-art.jpg' %}" alt="Children creating art for ocean conservation awareness" class="img-responsive">
                 </div>
                 <div class="project-content">
                     <h3>Blue Art: Creative Climate Action</h3>
@@ -74,7 +78,7 @@
             <!-- Project 2: Community Empowerment -->
             <div class="project-card featured">
                 <div class="project-image">
-                    <img src="assets/images/project-community.jpg" alt="Fishermen and community members in training workshop" class="img-responsive">
+                    <img src="{% static 'images/community-empowerment.jpg' %}" alt="Fishermen and community members in training workshop" class="img-responsive">
                 </div>
                 <div class="project-content">
                     <h3>Community Empowerment & Sustainable Livelihood</h3>
@@ -104,7 +108,7 @@
             <!-- Project 3: Lacustrine Community Park -->
             <div class="project-card featured">
                 <div class="project-image">
-                    <img src="assets/images/project-park.jpg" alt="Youth led shoreline restoration and community park development" class="img-responsive">
+                    <img src="{% static 'images/lacustrine-park.jpeg' %}" alt="Youth led shoreline restoration and community park development" class="img-responsive">
                 </div>
                 <div class="project-content">
                     <h3>Lacustrine Community Park</h3>
