@@ -417,7 +417,7 @@ ul li, ol li {
 .story-background-section,
 .leadership-preview,
 .team-values-section {
-    padding: var(--spacing-xl) 0;
+    padding: calc(var(--spacing-xl)/4) 0;
 }
 
 .cta-section {
