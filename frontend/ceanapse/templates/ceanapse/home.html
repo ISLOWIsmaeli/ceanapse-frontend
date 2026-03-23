@@ -29,7 +29,7 @@
                 <div class="mission-text">
                     <h2>Our Mission</h2>
                     <p>To empower coastal communities through sustainable blue economy solutions, faith-based environmental stewardship, and inclusive leadership, building resilience, dignity, and opportunity in the face of climate change.</p>
-                    <a href="#" class="link-arrow">Explore Our Vision →</a>
+                    <a href="{% url 'about-page' %}" class="link-arrow">Explore Our Vision →</a>
                 </div>
                 <div class="mission-image">
                     <img src="{% static 'images/community_restoration.jpg' %}" alt="Community working together on coastal restoration" class="img-responsive">
@@ -41,7 +41,7 @@
     <!-- KRA Highlights Section -->
     <section class="kra-section">
         <div class="container">
-            <h2>What We Do</h2>
+            <h2 style="text-align: center;">What We Do</h2>
             <p class="section-subtitle">Our strategic focus areas for regenerative blue economy impact</p>
             <div class="kra-grid">
                 <div class="kra-card">
@@ -85,12 +85,12 @@
             <div class="story-content">
                 <div class="story-image">
                     {% comment %} story-image {% endcomment %}
-                    <img src="{% static 'images/lacustrine-park.jpeg' %}" alt="Lacustrine Community Park - youth restoring Lake Victoria shoreline" class="img-responsive">
+                    <img src="{% static 'images/lacustrine-park.jpg' %}" alt="Lacustrine Community Park - youth restoring Lake Victoria shoreline" class="img-responsive">
                 </div>
                 <div class="story-text">
                     <p class="story-highlight">Restoring Lake Victoria's shoreline through youth-led action</p>
-                    <p>Shauri Yako, an informal settlement on Lake Victoria's edge, has been plagued by pollution and degradation. Ceanapse is bringing together young people to reclaim this neglected lakeside and transform it into the first-ever Lacustrine Community Park in Homabay — a clean, green, community-owned space that protects the lake and restores dignity.</p>
-                    <p>This fully youth-led project involves local households, women's groups, and environmental clubs in clean-ups, tree planting, and lake protection activities. Every contribution helps build a sustainable model of grassroots blue-economy restoration.</p>
+                    <p>Shauri Yako, an informal settlement on Lake Victoria's edge, has been plagued by pollution and degradation. Ceanapse is bringing together young people to reclaim this neglected lakeside and transform it into the first ever Lacustrine Community Park in Homabay (a clean, green, community owned space that protects the lake and restores dignity).</p>
+                    <p>This fully youth led project involves local households, women's groups, and environmental clubs in clean ups, tree planting, and lake protection activities. Every contribution helps build a sustainable model of grassroots blue economy restoration.</p>
                     <a href="{% url 'donate-page' %}" class="btn btn-primary">Support This Project</a>
                 </div>
             </div>
