@@ -25,6 +25,10 @@
     border-radius: var(--radius);
     box-shadow: var(--shadow);
 }
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     line-height: 1.6;
@@ -221,6 +225,25 @@ ul li, ol li {
     transition: all 0.3s ease;
     border: none;
     font-size: 1rem;
+    box-sizing: border-box;
+    min-width: 0;
+    max-width: 100%;
+}
+
+@media (max-width: 768px) {
+    .hero-buttons .btn,
+    .cta-buttons .btn,
+    .nav-menu li a,
+    .btn {
+        width: 100%;
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+
+    .hero-buttons,
+    .cta-buttons {
+        gap: 0.75rem;
+    }
 }
 
 .btn-primary {
