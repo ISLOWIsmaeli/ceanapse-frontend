@@ -12,4 +12,4 @@ def team_page(request):
 def donate_page(request):
     return render(request, "ceanapse/donate.html")
 def checkout_page(request):
-    return render(request, "ceanapse/donation_checkout.html")
+    return render(request, "ceanapse/donation_success.html")
