@@ -276,15 +276,17 @@ ul li, ol li {
 }
 
 .btn-secondary {
-    background-color: transparent;
+    background-color: var(--secondary-color);
     color: var(--white);
-    border: 2px solid var(--white);
+    border: 2px solid var(--secondary-color);
+    transition: all 0.3s ease;
 }
 
 .btn-secondary:hover {
-    background-color: var(--white);
-    color: var(--primary-color);
+    background-color: #00bf7a;
+    color: var(--white);
     transform: translateY(-2px);
+    box-shadow: var(--shadow-lg);
 }
 
 .btn-primary-light {
@@ -411,6 +413,72 @@ ul li, ol li {
 .page-hero-content p {
     font-size: 1.1rem;
     color: rgba(255, 255, 255, 0.95);
+}
+
+.response-section {
+    padding: var(--spacing-xl) 0;
+    background-color: var(--light-color);
+}
+
+.response-card {
+    max-width: 720px;
+    margin: 0 auto;
+    background-color: var(--white);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    padding: var(--spacing-lg);
+    text-align: center;
+}
+
+.response-title {
+    color: var(--primary-color);
+    margin-bottom: 0.75rem;
+    font-size: 2rem;
+}
+
+.response-subtitle {
+    color: var(--text-dark);
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+}
+
+.response-message {
+    color: var(--text-light);
+    margin: 1rem 0 1.5rem;
+}
+
+.response-details {
+    margin: 1rem 0 1.5rem;
+    text-align: left;
+    display: grid;
+    gap: 0.5rem;
+}
+
+.response-detail {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid var(--border-color);
+    padding-bottom: 0.5rem;
+}
+
+.response-detail-label {
+    font-weight: 700;
+    color: var(--text-dark);
+}
+
+.response-detail-value {
+    color: var(--text-dark);
+}
+
+.response-actions {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.response-actions .btn {
+    min-width: 165px;
 }
 
 /* ===============================
