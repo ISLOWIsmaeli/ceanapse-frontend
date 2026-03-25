@@ -1,0 +1,54 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %}Donation Success | Ceanapse{% endblock %}
+
+{% block content %}
+<section class="page-hero">
+    <div class="page-hero-background">
+        <video class="hero-img" autoplay loop muted playsinline>
+            <source src="{% static 'videos/projects-background.mp4' %}" type="video/mp4" />
+            Your browser does not support this video.
+        </video>
+    </div>
+    <div class="hero-overlay"></div>
+    <div class="page-hero-content">
+        <h1>Thank You!</h1>
+        <p>Your donation is now confirmed and your support is helping us protect and restore our blue economy.</p>
+    </div>
+</section>
+
+<section class="response-section">
+    <div class="container">
+        <div class="response-card">
+            <div class="response-content">
+                <h2 class="response-title">Donation Success!</h2>
+                <p class="response-subtitle">Thank you, <strong>{{ email|default:'you@example.com' }}</strong>, for your generous contribution.</p>
+
+                <div class="response-details">
+                    <div class="response-detail">
+                        <span class="response-detail-label">Project:</span>
+                        <span class="response-detail-value">{{ project.name|default:'General Fund' }}</span>
+                    </div>
+                    <div class="response-detail">
+                        <span class="response-detail-label">Email:</span>
+                        <span class="response-detail-value">{{ email|default:'you@example.com' }}</span>
+                    </div>
+                    <div class="response-detail">
+                        <span class="response-detail-label">Amount:</span>
+                        <span class="response-detail-value">KES {{ amount|default:'0.00' }}</span>
+                    </div>
+                </div>
+
+                <p class="response-message">
+                    Your receipt has been sent to your inbox. Please check your email to confirm the transaction and access the full receipt.
+                </p>
+
+                <div class="response-actions">
+                    <a href="{% url 'frontend-home' %}" class="btn btn-primary">Back to Home</a>
+                    <a href="{% url 'donate-page' %}" class="btn btn-secondary">Make Another Donation</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}
